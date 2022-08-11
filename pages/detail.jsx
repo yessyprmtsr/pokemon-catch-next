@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+
 import { getData } from "../adapter";
 
 const Detail = () => {
@@ -16,8 +17,6 @@ const Detail = () => {
     const detail = await getData(`pokemon/${value}`);
     setDetailData(detail.data);
   };
-
-  
 
   return (
     <>

@@ -13,9 +13,6 @@ const Home = () => {
     randomPokemon();
   }, []);
 
- 
-
-
   const randomPokemon = async () => {
     let dataRandom = [];
 
@@ -40,10 +37,12 @@ const Home = () => {
     });
 
     for (const i in dataPokemon.data.results) {
-      if (dataPokemon.data.results[i].name.indexOf(keyword.toLowerCase()) !== -1) {
+      if (
+        dataPokemon.data.results[i].name.indexOf(keyword.toLowerCase()) !== -1
+      ) {
         dataSearch.push(dataPokemon.data.results[i]);
       }
-	  console.log(dataSearch);
+      console.log(dataSearch);
     }
 
     setPokemon(dataSearch);
